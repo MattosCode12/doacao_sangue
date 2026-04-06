@@ -29,7 +29,7 @@ button {
  }
 
  .card{
-    background: white;
+    background: rgb(255, 255, 255);
     margin: 10px auto;
     padding: 10px;
     width: 300px;

@@ -46,4 +46,37 @@ form.addEventListener("submit", function(e) {
         return;
     }
 
-    
+    let doador = {
+        nome: nome,
+        email: email,
+        idade: idade,
+        peso: peso,
+        tipoSanguineo: tipo,
+        telefone: telefone,
+        cidade: cidade,
+        estado: estado
+    };
+
+    doadores.push(doador);
+
+    mensagem.textContent = "Cadastro realizado com sucesso!";
+    form.reset();
+
+    mostrarDoadores();
+    console.log(doadores);
+});
+
+function mostrarDoadores() {
+    lista.innerHTML = "";
+
+    doadores.forEach(d => {
+        lista.innerHTML += `
+            <div class="card">
+                <p><strong>Nome:</strong> ${d.nome}</p>
+                <p><strong>Tipo:</strong> ${d.tipoSanguineo}</p>
+                <p><strong>Cidade:</strong> ${d.cidade} - ${d.estado}</p>
+            </div>
+        `;
+    });
+}
+

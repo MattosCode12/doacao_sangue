@@ -16,4 +16,34 @@ form.addEventListener("submit", function(e) {
     let cidade = document.getElementById("cidade").value.trim();
     let estado = document.getElementById("estado").value.trim();
 
+     if (!nome || !email || !idade || !peso || !tipo || !telefone || !cidade || !estado) {
+        mensagem.textContent = "Preencha todos os campos!";
+        return;
+    }
+
+    if (nome.split(" ").length < 2) {
+        mensagem.textContent = "Digite nome e sobrenome!";
+        return;
+    }
+
+    if (!email.includes("@") || !email.includes(".")) {
+        mensagem.textContent = "Email inválido!";
+        return;
+    }
+
+    if (idade < 16) {
+        mensagem.textContent = "Idade mínima é 16 anos!";
+        return;
+    }
+
+    if (peso < 50) {
+        mensagem.textContent = "Peso mínimo é 50kg!";
+        return;
+    }
+
+    if (!/^\d+$/.test(telefone)) {
+        mensagem.textContent = "Telefone deve conter apenas números!";
+        return;
+    }
+
     

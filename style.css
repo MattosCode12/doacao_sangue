@@ -24,14 +24,15 @@ button {
 }
 
  #mensagem {
-    color: red;
     font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
  }
 
  .card{
     background: rgb(255, 255, 255);
-    margin: 10px auto;
-    padding: 10px;
-    width: 300px;
-    border-radius: 5px;
+    margin: 15px auto;
+    padding: 15px;
+    width: 320px;
+    border-radius: 8px;
  }

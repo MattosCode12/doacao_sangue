@@ -41,11 +41,6 @@ form.addEventListener("submit", function(e) {
         return;
     }
 
-    if (!/^\d+$/.test(telefone)) {
-        mensagem.textContent = "Telefone deve conter apenas números!";
-        return;
-    }
-
     let doador = {
         nome: nome,
         email: email,
